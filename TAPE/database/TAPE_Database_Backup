@@ -1,0 +1,163 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.5.25a
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema tape
+--
+
+CREATE DATABASE IF NOT EXISTS tape;
+USE tape;
+
+--
+-- Definition of table `hosterhosthouse`
+--
+
+DROP TABLE IF EXISTS `hosterhosthouse`;
+CREATE TABLE `hosterhosthouse` (
+  `hosterhouseimage` longblob NOT NULL,
+  `hosterhouseimagename` varchar(5000) NOT NULL,
+  `hosterhouseimagepath` varchar(5000) NOT NULL,
+  `hosterhouseid` varchar(45) NOT NULL,
+  `hosterhouseemailid` varchar(45) NOT NULL,
+  `hosterhousetitle` varchar(5000) NOT NULL,
+  `hosterhouseaddress` varchar(5000) NOT NULL,
+  `hosterhousecity` varchar(45) NOT NULL,
+  `hosterhousestate` varchar(45) NOT NULL,
+  `hosterhousepincode` varchar(45) NOT NULL,
+  `hosterhousecountry` varchar(45) NOT NULL,
+  `hosterhouseavailablefrom` varchar(45) NOT NULL,
+  `hosterhouseavailableto` varchar(45) NOT NULL,
+  `hosterhouseadults` varchar(45) NOT NULL,
+  `hosterhousechildren` varchar(45) NOT NULL,
+  `hosterhousedistancefromcenter` varchar(45) NOT NULL,
+  `hosterhouseminnoofdaystostay` varchar(45) NOT NULL,
+  `hosterhousenoofbathrooms` varchar(45) NOT NULL,
+  `hosterhousenoofbedrooms` varchar(45) NOT NULL,
+  `hosterhousenoofbeds` varchar(45) NOT NULL,
+  `hosterhousepetfriendly` varchar(45) DEFAULT NULL,
+  `hosterhousecarparking` varchar(45) DEFAULT NULL,
+  `hosterhousewirelessinternet` varchar(45) DEFAULT NULL,
+  `hosterhousereservations` varchar(45) DEFAULT NULL,
+  `hosterhouseprivateparking` varchar(45) DEFAULT NULL,
+  `hosterhousesmokingarea` varchar(45) DEFAULT NULL,
+  `hosterhousewheelchairaccessible` varchar(45) DEFAULT NULL,
+  `hosterhousepool` varchar(45) DEFAULT NULL,
+  `hosterhousewashingmachine` varchar(45) DEFAULT NULL,
+  `hosterhousedryer` varchar(45) DEFAULT NULL,
+  `hosterhousekitchenarea` varchar(45) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `hosterhosthouse`
+--
+
+/*!40000 ALTER TABLE `hosterhosthouse` DISABLE KEYS */;
+/*!40000 ALTER TABLE `hosterhosthouse` ENABLE KEYS */;
+
+
+--
+-- Definition of table `hosterregistration`
+--
+
+DROP TABLE IF EXISTS `hosterregistration`;
+CREATE TABLE `hosterregistration` (
+  `username` varchar(45) NOT NULL,
+  `emailid` varchar(45) NOT NULL,
+  `phoneno` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `confirmpassword` varchar(45) NOT NULL,
+  PRIMARY KEY (`emailid`,`phoneno`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `hosterregistration`
+--
+
+/*!40000 ALTER TABLE `hosterregistration` DISABLE KEYS */;
+/*!40000 ALTER TABLE `hosterregistration` ENABLE KEYS */;
+
+
+--
+-- Definition of table `userbookeddetails`
+--
+
+DROP TABLE IF EXISTS `userbookeddetails`;
+CREATE TABLE `userbookeddetails` (
+  `houseid` varchar(45) NOT NULL,
+  `useremailid` varchar(45) NOT NULL,
+  `hosterhouseemailid` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `userbookeddetails`
+--
+
+/*!40000 ALTER TABLE `userbookeddetails` DISABLE KEYS */;
+/*!40000 ALTER TABLE `userbookeddetails` ENABLE KEYS */;
+
+
+--
+-- Definition of table `userregistration`
+--
+
+DROP TABLE IF EXISTS `userregistration`;
+CREATE TABLE `userregistration` (
+  `username` varchar(45) NOT NULL,
+  `emailid` varchar(45) NOT NULL,
+  `phoneno` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `confirmpassword` varchar(45) NOT NULL,
+  PRIMARY KEY (`emailid`,`phoneno`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `userregistration`
+--
+
+/*!40000 ALTER TABLE `userregistration` DISABLE KEYS */;
+/*!40000 ALTER TABLE `userregistration` ENABLE KEYS */;
+
+
+--
+-- Definition of table `usersearchhistory`
+--
+
+DROP TABLE IF EXISTS `usersearchhistory`;
+CREATE TABLE `usersearchhistory` (
+  `destination` varchar(45) NOT NULL,
+  `checkin` varchar(45) NOT NULL,
+  `checkout` varchar(45) NOT NULL,
+  `adults` varchar(45) NOT NULL,
+  `children` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `usersearchhistory`
+--
+
+/*!40000 ALTER TABLE `usersearchhistory` DISABLE KEYS */;
+/*!40000 ALTER TABLE `usersearchhistory` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

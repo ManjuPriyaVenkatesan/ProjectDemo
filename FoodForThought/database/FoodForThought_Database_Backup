@@ -1,0 +1,443 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.5.25a
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema foodforthought
+--
+
+CREATE DATABASE IF NOT EXISTS foodforthought;
+USE foodforthought;
+
+--
+-- Definition of table `content`
+--
+
+DROP TABLE IF EXISTS `content`;
+CREATE TABLE `content` (
+  `fake_count` int(11) NOT NULL,
+  `Author` varchar(5000) NOT NULL,
+  `Description` varchar(5000) NOT NULL,
+  `URL` varchar(5000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `content`
+--
+
+/*!40000 ALTER TABLE `content` DISABLE KEYS */;
+/*!40000 ALTER TABLE `content` ENABLE KEYS */;
+
+
+--
+-- Definition of table `datacollected`
+--
+
+DROP TABLE IF EXISTS `datacollected`;
+CREATE TABLE `datacollected` (
+  `Author` varchar(5000) DEFAULT NULL,
+  `Description` varchar(25000) DEFAULT NULL,
+  `URL` varchar(5000) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `datacollected`
+--
+
+/*!40000 ALTER TABLE `datacollected` DISABLE KEYS */;
+INSERT INTO `datacollected` (`Author`,`Description`,`URL`) VALUES 
+ ('Jimmy Rustling','The Amish In America Commit Their Vote To Donald Trump; Mathematically Guaranteeing Him A Presidential Victory - ABC News','abcnews.com.co'),
+ ('Jimmy Rustling','Obama Signs Executive Order Declaring Investigation Into Election Results; Revote Planned For Dec. 19th - ABC News','abcnews.com.co'),
+ ('Day of the Dead 2015 : History , food and reflections  Andrea Lawson Gray','Comment on HALLOWEEN IN THE CASTRO RETURNS IN 2014! by Day of the Dead 2015: History, food and reflections  Andrea Lawson Gray','adobochronicles.com\r'),
+ ('Ivan Jose','Comment on Tutorial: Riding The Philippine Jeepney by Ivan Jose','adobochronicles.com\r'),
+ ('Tony Rabon','Comment on What White House Executive Chef Comerford Would Cook For President Hillarys First Meal by Tony Rabon','adobochronicles.com\r'),
+ ('Shirley Barnett','Comment on Philippines Voids Building Permit Of Trump Tower In Makati City by Shirley Barnett','adobochronicles.com\r'),
+ ('adobochron','Comment on Philippine Government To Take Back The Internet From Maria Ressa And Rappler? by adobochron','adobochronicles.com\r'),
+ ('Rebecca Bennett','Comment on If Elected President, Donald Trump Will Not Live In The White House by Rebecca Bennett','adobochronicles.com\r'),
+ ('Eligio Abellera','Comment on WHITE HOUSE EXECUTIVE CHEF REVEALS OBAMAS FAVORITE FILIPINO FOODS by Eligio Abellera','adobochronicles.com\r'),
+ ('Sue Penn ( @ SuePennonTwitte )','Comment on Respected Journalist Bill Moyers Is First High-Profile American To Flee U.S. After Trumps Election by Sue Penn (@SuePennonTwitte)','adobochronicles.com\r'),
+ ('Mitch Jalandoni','Comment on Donald Trump To Replace Filipina White House Chef With Paula Deen by Mitch Jalandoni','adobochronicles.com\r'),
+ ('adobochronicles.com - Real or Satire ?','Comment on About Us by adobochronicles.com - Real or Satire?','adobochronicles.com\r'),
+ ('Koel @ WritingSouls','Comment on Philippines Department Of Tourism Unveils New Promo Slogan, A Double Entendre by Koel@WritingSouls','adobochronicles.com\r'),
+ ('Shawn Helton','FBI REDUX: Whats Behind New Probe into Hillary Clinton Emails?','21stcenturywire.com\r'),
+ ('Mike Rivero','PARTY CORRUPTION: Clinton Campaign Directly Tied to Disgraced DNC Consultant','21stcenturywire.com\r'),
+ ('Shawn Helton','PARTNERS IN CRIME: Goldman Sachs, The Clintons & Wall Street','21stcenturywire.com\r'),
+ ('Mike Rivero','COLOR REV AGIT PROP: George Soros MoveOn Agitators March on America  as Billionaire Instigator Sued','21stcenturywire.com\r'),
+ ('Mike Rivero','Henningsen: US Anti-Trump Protests Similar to Soros Color Revolutions Abroad','21stcenturywire.com\r'),
+ ('Mike Rivero','CBS 60 Minutes Withheld Trumps Appeal to Stop Attacking Minorities, and Ignored Reports of Attacks on Trump Supporters','21stcenturywire.com\r'),
+ ('Mike Rivero','FLASHBACK - Hillary Clintons KKK Smear Against Trump was Democrat Strategy','21stcenturywire.com\r'),
+ ('Mike Rivero','Hillary Clinton Supporters Now Calling for a Recount of Votes in Battleground States','21stcenturywire.com\r'),
+ ('Branko Mali','Hell Comes to Frogtown: Alt Right and Triumph of Transhumanism','21stcenturywire.com\r'),
+ ('Brandon Turbeville','A Tale Of Two Cities: Mosul And Aleppo','activistpost.com\r'),
+ ('Activist Post','New Alaska Law Taking First Step Against Common Core','activistpost.com\r'),
+ ('Activist Post','Military Veteran Bonus Scandal Might Be Much Worse Than Initially Reported','activistpost.com\r'),
+ ('Activist Post','NATO, US, And UK Assemble Largest Troop Buildup On Russian Border Since Cold War','activistpost.com\r'),
+ ('Activist Post','Destruction of US Abrams Tank: Mosul Offensive Good for General Dynamics','activistpost.com\r'),
+ ('Activist Post','A Conundrum of the Current Political Season','activistpost.com\r'),
+ ('Activist Post','Liberty or State Control? You Decide','activistpost.com\r'),
+ ('Activist Post','Snowden: Journalists Are a Threatened Class in Era of Mass Surveillance','activistpost.com\r'),
+ ('ActivistPost','We Now Have Proof Obamacare Was Designed to Fail and Heres Why','activistpost.com\r'),
+ ('Activist Post','No-Fly Zone Declared as Militarized Police Prep for Assault on Front-Line Camp at Standing Rock','activistpost.com\r'),
+ ('ActivistPost','Anonymity: The Greatest Weapon Against Oppression','activistpost.com\r'),
+ ('Brandon Turbeville','U.S. Takes A Stab At A No Fly Zone In Two Places  Syria And Standing Rock','activistpost.com\r'),
+ ('Activist Post','5 Things You Need to Know About the Dakota Access Pipeline Protests','activistpost.com\r'),
+ ('Activist Post','Americans Preparing for Strong Possibility of Violence on Election Day','activistpost.com\r'),
+ ('Activist Post','Irony Redefined: Human Rights Champion Suu Kyi Jails Dissidents','activistpost.com\r'),
+ ('ActivistPost','We Live In A Time Where Each Individual Has Immense Power','activistpost.com\r'),
+ ('Activist Post','Technocracy: The Real Reason Why The UN Wants Control Over The Internet','activistpost.com\r'),
+ ('Activist Post','Financial Whistleblower Explains Whats About to Happen to the Economy','activistpost.com\r'),
+ ('Activist Post','Distracted By Election 2016, No One Resisted The Deep States Patriot Act 2','activistpost.com\r'),
+ ('Activist Post','How HUD Makes Lousy Programs Look Great','activistpost.com\r'),
+ ('Activist Post','On The Fault Lines of Change: Globalization-v-Localization','activistpost.com\r'),
+ ('ActivistPost','Blaming Russia For Everything Wrong in the US is Getting Dangerous','activistpost.com\r'),
+ ('Activist Post','FBI Reopens Hillary Email Probe: Why Did It Take So Long?','activistpost.com\r'),
+ ('ActivistPost','Restaurant Chain Tim Hortons Blocks Independent Journalists Website on WiFi','activistpost.com\r'),
+ ('Activist Post','Russia Kicked Off UN Human Rights Council, While Terrorist Saudi Arabia Re-Elected','activistpost.com\r'),
+ ('Activist Post','Like a Concentration Camp Police Mark DAPL Protesters with Numbers and Lock Them in Dog Kennels','activistpost.com\r'),
+ ('Activist Post','Mark Ruffalo Delivers Mobile Solar Trailers to Standing Rock Camps in Preparation for Harsh Winter','activistpost.com\r'),
+ ('Activist Post','Cancer, Cancer Everywhere  But Not In The Presidential Suite','activistpost.com\r'),
+ ('Activist Post','The Globalization Of Media: A Failing Strike Force','activistpost.com\r'),
+ ('Activist Post','Heres Why Everyone On Facebook Is Checking Into Standing Rock, North Dakota','activistpost.com\r'),
+ ('Activist Post','Chinas Airport Security Robot Can Deliver Electroshocks','activistpost.com\r'),
+ ('Activist Post','Russia, Japan May Finally Sign Peace Treaty to Officially End WWII Conflict','activistpost.com\r'),
+ ('Activist Post','Biggest Election Fraud In History Discovered In The United States','activistpost.com\r'),
+ ('Activist Post','DAPL Protesters Proven Right as Largest Gas Pipeline in U.S. Experiences Massive and Deadly Explosion','activistpost.com\r'),
+ ('Activist Post','Not Just Hillary, Entire Obama Administration Exposed for Using Private Email to Avoid FOIA Requests','activistpost.com\r'),
+ ('Activist Post','Former Ambassador Andrew Young Calls for End to Water Fluoridation, Civil Rights Issue','activistpost.com\r'),
+ ('Activist Post','Johnson & Johnson Loses Yet Another Multimillion Dollar Case Over Baby Powder','activistpost.com\r'),
+ ('Activist Post','Latest Assault on Aleppo: West Covers Up Terror-Ties','activistpost.com\r'),
+ ('ActivistPost','Obamacare forces companies to drop workers from private insurance','activistpost.com\r'),
+ ('Activist Post','Feds Ramp Up REAL ID Bullying Tactics','activistpost.com\r'),
+ ('Activist Post','AT&T Helping Feds Spy On Everyone','activistpost.com\r'),
+ ('Activist Post','Critics Decry Surveillance of Canadian Journalist as Part of Horrifying Culture Shift','activistpost.com\r'),
+ ('Activist Post','Turkeys Crackdown on Criticism Continues as Journalists, 10K Civil Servants Arrested','activistpost.com\r'),
+ ('Activist Post','Anti-ISIS Coalition Too Busy Defeating Themselves to Defeat ISIS','activistpost.com\r'),
+ ('Activist Post','Someone Just Donated $2.5 Million to Bail Out Everyone Arrested at Standing Rock','activistpost.com\r'),
+ ('ActivistPost','If Russia Can Rig the US Presidential Election, So Can An Insider','activistpost.com\r'),
+ ('Activist Post','Violent Escalation At The #DAPL Protests w/Derrick Broze','activistpost.com\r'),
+ ('Activist Post','Water Protectors Face Off With Police #NoDAPL','activistpost.com\r'),
+ ('Activist Post','See Real Voting System Rigged For Election Theft  Bev Harris','activistpost.com\r'),
+ ('Activist Post','Smart Meter Case Testimony Before the Pennsylvania Public Utility Commission: What No One Wants to Acknowledge About EMF Damage','activistpost.com\r'),
+ ('Activist Post','Regardless of Who Wins the Election, Confidence in Washington DC Is ALREADY Shattered','activistpost.com\r'),
+ ('Activist Post','Iraqis in Mosul Find US Missiles at Captured Islamic State Base','activistpost.com\r'),
+ ('Activist Post','Fed Holds on Raising Rates, Fears Rising Dollar','activistpost.com\r'),
+ ('Activist Post','In Rush to Lay Blame, Media Ignores Positive Community Movement in Flint, Michigan','activistpost.com\r'),
+ ('ActivistPost','You Are Being Programmed to Hate','activistpost.com\r'),
+ ('Activist Post','UK Involvement In US Secret Drone War Revealed','activistpost.com\r'),
+ ('Activist Post','US War In Afghanistan Silently Slips Into The Abyss','activistpost.com\r'),
+ ('ActivistPost','Some Want Injustice To Be Distributed Evenly, Rather Than Not At All','activistpost.com\r'),
+ ('Activist Post','Smart Meter Case Testimony Before the Pennsylvania Public Utility Commission: What No One Wants to Acknowledge About EMF Damage (Part 2 of 4)','activistpost.com\r'),
+ ('Activist Post','Colorado Cannabis Industry Contributes More to Economy Than All Other Industries: Report','activistpost.com\r'),
+ ('Activist Post','When Good People Share Bad Info ” Heres Why You Need to Fact Check Before You Click Share','activistpost.com\r'),
+ ('Activist Post','Police Turn In Badges Rather Than Incite Violence Against Standing Rock Protesters: Report','activistpost.com\r'),
+ ('Activist Post','Smart Meter Case Testimony Before the Pennsylvania Public Utility Commission: What No One Wants to Acknowledge About EMF Damage (Part 3 of 4)','activistpost.com\r'),
+ ('Activist Post','WikiLeaks Revelations Leave The Federal Emperor Wearing No Clothes','activistpost.com\r'),
+ ('Activist Post','Iraqi Car Bomb Jaw-Dropping Crisis Actor Fakery Caught On Video','activistpost.com\r'),
+ ('Brandon Turbeville','FEMA Opens Loan Window As Red Cross Tries To Shut Down Shelters','activistpost.com\r'),
+ ('Activist Post','Cops Threaten To Arrest Students If They Dont Stop Handing Out Constitutions','activistpost.com\r'),
+ ('ActivistPost','U.S. Elections November Chaos: What Youre Not Being Told','activistpost.com\r'),
+ ('Activist Post','US Plan C in Syria: Make Al Qaeda Central The New Capital','activistpost.com\r'),
+ ('Activist Post','Drone Restrictions Can Help Peaceful Protesters Combat Injustice','activistpost.com\r'),
+ ('Activist Post','What Can The Mass Check-in At Standing Rock Tell Us About Online Advocacy?','activistpost.com\r'),
+ ('Activist Post','Smart Meter Case Testimony Before the Pennsylvania Public Utility Commission: What No One Wants to Acknowledge About EMF Damage (Part 4 of 4)','activistpost.com\r'),
+ ('Activist Post','False Flag? US Intelligence Warns Of Likely Al Qaeda Terror Attack Day Before Election','activistpost.com\r'),
+ ('Activist Post','Tree-Shaped Vertical Farm Can Grow 24 Acres Of Crops','activistpost.com\r'),
+ ('Activist Post','No One Tried to Assassinate Donald Trump  But Austyn Crites Shows Up in WikiLeaks 7 Times','activistpost.com\r'),
+ ('Activist Post','Navy Petty Officer Joins DAPL Protest With Upside Down Flag  Our Greatest Enemies Are Right Here','activistpost.com\r'),
+ ('Activist Post','Leaked Memo: Clinton Foundation Broke The Law','activistpost.com\r'),
+ ('Activist Post','Tiny Homes Banned In U.S. At Increasing Rate As Govt Criminalizes Sustainable Living','activistpost.com\r'),
+ ('ActivistPost','The Empire Files: Abby Martin Exposes John Podesta','activistpost.com\r'),
+ ('Activist Post','Election Uncertainty Now Influencing Gold and Silver Prices','activistpost.com\r'),
+ ('Activist Post','DNC Hack: A Cold War 2.0 False Flag','activistpost.com\r'),
+ ('Activist Post','Heres a Summary Of the Engineered US Election Chaos With a Positive Perspective','activistpost.com\r'),
+ ('Activist Post','FBI Wants you to Believe It Examined 650,000 Emails in 691,000 Seconds','activistpost.com\r'),
+ ('Activist Post','WikiLeaks Fends Off Cyber Attack','activistpost.com\r'),
+ ('Activist Post','Police Caught Spying on Journalists to Uncover Source of Leaks','activistpost.com\r'),
+ ('Activist Post','Just Weeks After Obamas Executive Order on Catastrophic Space Weather Events, a Coronal Mass Ejection Is Set to Hit on Election Day?','activistpost.com\r'),
+ ('Activist Post','Police State Elections, 2016','activistpost.com\r'),
+ ('ActivistPost','9 Reasons Why I Am NOT Voting','activistpost.com\r'),
+ ('Activist Post','No Matter Who Wins: The Case Against Hillary Clinton Is Alive','activistpost.com\r'),
+ ('Activist Post','Cops Fire Tear Gas on Water Protectors as They Attempt to Reclaim Sacred Land','activistpost.com\r'),
+ ('Activist Post','What Is Fake News?','activistpost.com\r'),
+ ('Brandon Turbeville','The U.S./Turkey Plan For Seizing, Holding, And Occupying Syrian Territory In Raqqa','activistpost.com\r'),
+ ('Brandon Turbeville','The U.S./Turkey Plan For Seizing, Holding, And Occupying Syrian Territory In Raqqa','activistpost.com\r'),
+ ('Activist Post','Proof That 100 Years of Voting for the Lesser Evil Gave Us Trump and Hillary','activistpost.com\r'),
+ ('Activist Post','Trump Declared The Winner','activistpost.com\r'),
+ ('Activist Post','President Elect Trump: A New Era of Unpredictability Awaits','activistpost.com\r'),
+ ('Activist Post','Election: Medias Movie of Reality Failed','activistpost.com\r'),
+ ('Activist Post','Voters in Arkansas, North Dakota Legalize Medical Marijuana Despite Federal Prohibition','activistpost.com\r'),
+ ('Activist Post','Florida Voters Approve Medical Marijuana, Reject Federal Prohibition','activistpost.com\r'),
+ ('AFRICA-NEWS','Regime Change? South Africa Targeted by Western Destabilization Efforts? | Global Research','globalresearch.ca\r'),
+ ('Times Live','Combat Obesity with a Balance of Omega-3 and Omega-6','infowars.com\r'),
+ ('Mirror.co.uk','12 Austrian Schools Evacuated Over Radioactive Rock','infowars.com\r'),
+ ('Astronomy','There May Be Another Planet in Our Solar System','infowars.com\r'),
+ ('Fiona Miller','Getting 10 Minutes of Sunlight Per Day Can Stop Depression','infowars.com\r'),
+ ('Jonathan Lee','The War Against Payday Lending','infowars.com\r'),
+ ('David Knight','Levers of Power: Flushing the Vote Down the Memory Hole','infowars.com\r'),
+ ('Infowars.com','Top Clinton Ally Caught Accepting $20k Foreign Donation','infowars.com\r'),
+ ('Adan Salazar','Police Investigate Fraud after Voter Registration Flips from Republican to Democrat','infowars.com\r'),
+ ('James Holbrooks','Kurds Worried Turkey Will Stab Them in the Back as They Fight ISIS','infowars.com\r'),
+ ('Darius Shahtahmasebi','US Government Acknowledges That al-Qaeda Is Not A Priority In Syria','infowars.com\r'),
+ ('Jenna McLaughlin','Justice Department Releases Guidelines on Controversial Anti-Hacking Law','infowars.com\r'),
+ ('Mikael Thalen','Obama Admin Targets Soldiers Bonuses, Lets Bad VA Employees Keep Theirs','infowars.com\r'),
+ ('Mikael Thalen','Black Lives Matter leader DeRay McKesson endorses Clinton','infowars.com\r'),
+ ('Millie Weaver','Daughter of Holocaust Survivors Running for Senate Supports 2nd Amendment','infowars.com\r'),
+ ('USA Today','California National Guard Members wont have to Pay Back Bonuses','infowars.com\r'),
+ ('Paul Joseph Watson','Obamacare Architect Gruber Demands Larger Mandate Penalty','infowars.com\r'),
+ ('Mikael Thalen','Ex-State Dept Employee: Sending Sensitive Info to Private Email Norm Under Clinton','infowars.com\r'),
+ ('Jing Jin','Will China Trigger the Next Global Recession?','infowars.com\r'),
+ ('Infowars.com','Breaking! Google & Youtube Caught Censoring Bill Clintons Son','infowars.com\r'),
+ ('Steve Watson','Get Ready For Civil Unrest: Survey Finds That Most Americans Are Concerned About Election Violence','infowars.com\r'),
+ ('Steve Watson','Communists Terrorize Small Business','infowars.com\r'),
+ ('Steve Watson','Guardian Front Page: A 16-Year-Old Migrant Cries','infowars.com\r'),
+ ('Steve Watson','Obamacare Architect LAUGHS About Skyrocketing Premiums [VIDEO]','infowars.com\r'),
+ ('Steve Watson','WATCH: Hillary Aide RUSHES to Her Side to Help Her Climb ONE Step!','infowars.com\r'),
+ ('Paul Joseph Watson','Clinton Campaign Circulated Paul Ryan Relative as Possible Supreme Court Pick','infowars.com\r'),
+ ('Steve Watson','Video: Rude CNN Reporter Asks Trump Why Hes Taking Time Off To Open A Hotel','infowars.com\r'),
+ ('Alex Jones','Democrats Plan To Burn Down U.S. If Trump Elected','infowars.com\r'),
+ ('Kit Daniels','Podesta: Who Told Hillary She Could Use Private Email?','infowars.com\r'),
+ ('Steve Watson','Trump Warns Of Vote Flipping On Machines','infowars.com\r'),
+ ('National Geographic','Exclusive: Christs Burial Place Exposed for First Time in Centuries','infowars.com\r'),
+ ('Steve Watson','Three Quarters Of Americans Oppose Gun Control','infowars.com\r'),
+ ('Paul Joseph Watson','Wikileaks Email: Clinton Operative Thinks Black Voters Are Stupid','infowars.com\r'),
+ ('Fiona Miller','Chinese University Sells HIV Testing Kits in Vending Machine','infowars.com\r'),
+ ('The Alex Jones Show','Hillary is a REAL Christian says Michael Moore','infowars.com\r'),
+ ('Adan Salazar','US-led Coalition Killed 300 Civilians in just 11 Air Strikes in Syria, Amnesty International Report Finds','infowars.com\r'),
+ ('Kelen M','MONOPOLY: Banks, Then Media, Now Voting Machine Companies','infowars.com\r'),
+ ('Kit Daniels','Public Faith in Elections Falls as the State Grows','infowars.com\r'),
+ ('Kelen M','Ignoring The Law To Rig Elections','infowars.com\r'),
+ ('Adan Salazar','WHO Cancer Agency Under Fire for withholding carcinogenic glyphosate Documents','infowars.com\r'),
+ ('Kelen M','Grassroot Voter Fraud Investigation Hacked','infowars.com\r'),
+ ('Kelen M','Illegal Immigrants Crossing The Border To Vote','infowars.com\r'),
+ ('Kelen M','Trump Promotes World Peace As Hillary Calls For War','infowars.com\r'),
+ ('Fiona Miller','AIDS Patient Zero Not the Source of the Outbreak','infowars.com\r'),
+ ('Fiona Miller','UK Doctors Create List of Procedures You Dont Need','infowars.com\r'),
+ ('Fiona Miller','Vitamin D Deficiency, Dirty Air Doubles Your Risk of Dementia','infowars.com\r'),
+ ('Beau Albrecht','How A Communist Brainwashing Method Came To The US','infowars.com\r'),
+ ('Michael Sebastian','Trump And His Supporters Are Fighting A Rigged System','infowars.com\r'),
+ ('David G. Brown','7 Wikileaks Hillary Revelations The Media Wont Cover','infowars.com\r'),
+ ('RT','Assange claims crazed Clinton campaign tried to hack WikiLeaks','infowars.com\r'),
+ ('Mikael Thalen','Exclusive: Dem Senators Private Email Hacked','infowars.com\r'),
+ ('Infowars Nightly News','After Vets Fight War, Feds Demand Money Back','infowars.com\r'),
+ ('Kit Daniels','ABC Poll Oversamples Dems by 9%, Claims Hillary Leading','infowars.com\r'),
+ ('BBC','Mosquito Army Released in Zika Fight in Brazil & Colombia','infowars.com\r'),
+ ('Infowars.com','Bill Clintons Son Danney Williams has Youtube Channel Restored','infowars.com\r'),
+ ('Sky News','UK Economy Grows 0.5% in Three Months after Brexit Vote','infowars.com\r'),
+ ('Infowars.com','Shocking! Michele Obama & Hillary Caught Glamorizing Date Rape Promoters','infowars.com\r'),
+ ('Infowars.com','The Most Shocking Campaign Ad Youve Ever Seen','infowars.com\r'),
+ ('Michael W. Chapman','Christians Martyred by ISIS: 1,131','infowars.com\r'),
+ ('Julie Fidler','Most Top Retailers Sell Food Produced With Bee-Killing Pesticides','infowars.com\r'),
+ ('Infowars.com','Black Trump Supporter: We need somebody that loves America','infowars.com\r'),
+ ('Paul Joseph Watson','Social Justice Warriors Vow to Call the Police on People Wearing Offensive Halloween Costumes','infowars.com\r'),
+ ('Patrick G. Eddington','When CIA and NSA Workers Blow the Whistle, Congress Plays Deaf','infowars.com\r'),
+ ('Jon Anthony','Why Every Man Must Take Control Of His Finances','infowars.com\r'),
+ ('Jon Bowne','The Great American Screwjob','infowars.com\r'),
+ ('Paul Joseph Watson','A Vote For Hillary is a Vote For World War 3','infowars.com\r'),
+ ('Steve Watson','Statistical Tie: Latest Breitbart/Gravis Poll Shows Donald Trump Closes the Gap with Less Than Two Weeks Left','infowars.com\r'),
+ ('Steve Watson','Schools All Over America Are Closing On Election Day Due To Fears Of Violence','infowars.com\r'),
+ ('Steve Watson','Putin Mocks Clinton Claim Of Russia Election Meddling: Is U.S. A Banana Republic?','infowars.com\r'),
+ ('Steve Watson','WATCH: CNN Called Clinton News Network On Air by Fiery British Conservative','infowars.com\r'),
+ ('Steve Watson','Homeless Woman Protects Trumps Walk of Fame Star From Violent Leftists','infowars.com\r'),
+ ('Steve Watson','Germany: Students Forced to Chant Allahu Akbar, Punished for Refusing Trip to Mosque','infowars.com\r'),
+ ('Paul Joseph Watson','Wikileaks Email: Hillary Campaign Struggles to Reach F**king Dumb Young People','infowars.com\r'),
+ ('Paul Joseph Watson','Maryland Trump Supporter: They Switched My Vote to Hillary','infowars.com\r'),
+ ('Alex Jones','Hillary Responds To Creepy Joe Biden Caught Groping Dozens of Young Women','infowars.com\r'),
+ ('Jamie White','Clinton Insider: Rigging Only Way Hillary Can Win','infowars.com\r'),
+ ('Palm Beach Post','Study Finds Women Now Drinking as Much as Men','infowars.com\r'),
+ ('The Independent','Social Media Activity Can Show Early Signs of Depression and Schizophrenia','infowars.com\r'),
+ ('Infowars Nightly News','Back Story Of FBIs Hillary Cover-Up','infowars.com\r'),
+ ('Infowars Nightly News','Black Activist Blasts Hillary Clinton Over Wikileaks Revelation','infowars.com\r'),
+ ('Kit Daniels','#DraftOurDaughters: Pro-War Hillary Faces Backlash Over Female Draft','infowars.com\r'),
+ ('Infowars Nightly News','Trump Will Beat Hillary With These Tricks','infowars.com\r'),
+ ('Jon Bowne','The Globalists Behind The Rigged US Elections','infowars.com\r'),
+ ('Alex Jones','Hillary Running Scared From Shocking New Developments','infowars.com\r'),
+ ('The Alex Jones Show','Trump Votes Are Being Flipped To Clinton','infowars.com\r'),
+ ('Infowars.com','Hillary Planning Violent Mob Attacks If Trump Wins','infowars.com\r'),
+ ('Infowars.com','This Viral Video Has Hillary Running Scared','infowars.com\r'),
+ ('Fiona Miller','Big Pharma Targets Profits in Rare Diseases','infowars.com\r'),
+ ('The Alex Jones Show','Elitists Will Reap Grapes of Wrath','infowars.com\r'),
+ ('Adan Salazar','Breaking: FBI Reopens Investigation into Clinton Emails','infowars.com\r'),
+ ('JÃ¶rg Guido HÃ¼lsmann','Is De-industrialization a Natural Phenomenon of Developed Economies?','infowars.com\r'),
+ ('Infowars Nightly News','Clinton Camp Desperate, Russia Trains for WWIII','infowars.com\r'),
+ ('Mikael Thalen','The Email That Got John Podesta Hacked','infowars.com\r'),
+ ('Kelen M','Clinton Inc: Watch How it Pains MSM to Report Clinton Corruption','infowars.com\r'),
+ ('Kit Daniels','Britain Should Embrace Unilateral Free Trade Right Now','infowars.com\r'),
+ ('Allen Mendenhall','Ideas Make Us Rich','infowars.com\r'),
+ ('Mikael Thalen','Hillary To Be Indicted After Election: Trump Responds To FBI Investigation','infowars.com\r'),
+ ('Mikael Thalen','World Community Fears Hillary Kill List','infowars.com\r'),
+ ('Steve Watson','3 Competing Theories On Why The FBI Re-opened The Hillary Email Server Investigation','infowars.com\r'),
+ ('Steve Watson','2006 Audio Emerges of Hillary Clinton Proposing Rigging Palestine Election','infowars.com\r'),
+ ('Mikael Thalen','Votes Being Switched In Multiple States To Clinton','infowars.com\r'),
+ ('Mike Adams','Associated Press reporter admits faking news stories for Hillary Clinton stunning admission reveals how AP prints whatever the Clintons want, FACTS BE DAMNED','newstarget.com\r'),
+ ('Don Wrightman','YouTube censoring videos  on censorship!','newstarget.com\r'),
+ ('Don Wrightman','The Rothschild Family has corrupted global banks, news media, oil and government','newstarget.com\r'),
+ ('D. Samuelson','Doctors prescribe deadly opioid for pain-related issues that arent even legal','newstarget.com\r'),
+ ('Don Wrightman','NYT credibility DESTROYED by 7 simple questions from Newt Gingrich','newstarget.com\r'),
+ ('admin','Clinton Campaign Chair Had Dinner With Top DOJ Official One Day After Hillarys Benghazi Hearing','prisonplanet.com\r'),
+ ('admin','Hillary takes a cookie from a little person on Univision, gets tequila and a huge birthday cake, practices Spanish, dances Salsa, and gets called a home girl in do-anything bid to crush Trump in Florida','prisonplanet.com\r'),
+ ('admin','Migrant screaming Allahu Akbar bursts into a wedding in a German church and tears down decorations','prisonplanet.com\r'),
+ ('admin','Strange messages coming from the stars are probably from aliens, scientists say','prisonplanet.com\r'),
+ ('admin','Obamacare Architect on Rising Premiums: Its Not a Big Increase','prisonplanet.com\r'),
+ ('admin','Defense Board: White House Blocked Navy From S. China Sea Warship Passages','prisonplanet.com\r'),
+ ('admin','Team Clinton: Lets Talk About Russia, Not the WikiLeaks Emails','prisonplanet.com\r'),
+ ('admin','Syrian Mother: Islamic State Baked Christians, Kneaded Children in Bakery Machines','prisonplanet.com\r'),
+ ('admin','Anger in NATO, EU as Syria-bound Russian carrier group mulls stopover at Spanish port','prisonplanet.com\r'),
+ ('admin','US-led coalition killed 300 Syrian civilians in 11 probed strikes  Amnesty','prisonplanet.com\r'),
+ ('admin','Hollande set to lose French presidency after complaining there are too many immigrants','prisonplanet.com\r'),
+ ('admin','Trump Supporter Attacked by Hillary Zombies','prisonplanet.com\r'),
+ ('admin','Editor of Austrias Largest Paper Charged with Hate Speech over Migrant Article','prisonplanet.com\r'),
+ ('admin','Florida: Taco Trucks Used to Lure Democrat Voters to Polls','prisonplanet.com\r'),
+ ('admin','Samantha Bee Says Partial Birth Abortion is Not a Thing. WRONG.','prisonplanet.com\r'),
+ ('admin','Leaked Emails Reveal Hillary Cant Speak for Very Long Without a Podium So Were the Debates Rigged?','prisonplanet.com\r'),
+ ('admin','Condell: Americas Moment Of Truth','prisonplanet.com\r'),
+ ('admin','Obamacare Architect Gruber Demands Larger Mandate Penalty','prisonplanet.com\r'),
+ ('admin','Nuclear Reactor in Norway Leaks Radioactive Iodine','prisonplanet.com\r'),
+ ('admin','WATCH: Hillary Aide RUSHES to Her Side to Help Her Climb ONE Step!','prisonplanet.com\r'),
+ ('admin','Get Ready For Civil Unrest: Survey Finds That Most Americans Are Concerned About Election Violence','prisonplanet.com\r'),
+ ('admin','Communists Terrorize Small Business','prisonplanet.com\r'),
+ ('admin','Guardian Front Page: A 16-Year-Old Migrant Cries','prisonplanet.com\r'),
+ ('admin','Texas Official Sees Record Breaking Turnout, And Its All For Trump','prisonplanet.com\r'),
+ ('admin','Obamacare Architect LAUGHS About Skyrocketing Premiums [VIDEO]','prisonplanet.com\r'),
+ ('admin','Clinton Campaign Circulated Paul Ryan Relative as Possible Supreme Court Pick','prisonplanet.com\r'),
+ ('admin','NATO Buildup in Eastern Europe: Weve Only Seen the Tip of the Iceberg','prisonplanet.com\r'),
+ ('admin','Leaked Memo Exposes Shady Dealings Between Clinton Foundation Donors And Bills For-Profit Activities','prisonplanet.com\r'),
+ ('admin','Lets Be Clear  A Vote For Warmonger Hillary Clinton Is A Vote For World War 3','prisonplanet.com\r'),
+ ('admin','UK economy grows 0.5pc in the wake of Brexit vote, defying recession fears','prisonplanet.com\r'),
+ ('admin','Fascism? Environmentalists Force Coal Plant Closure. Towns Economy Hit HARD','prisonplanet.com\r'),
+ ('admin','College warns against deplorable and problematic costumes','prisonplanet.com\r'),
+ ('admin','Meet Peter Kadzik  Another Clinton Stooge at the Justice Department','prisonplanet.com\r'),
+ ('admin','Bill Clintons Lover: He Called Ruthless Hillary The Warden','prisonplanet.com\r'),
+ ('admin','Wikileaks memo: Bill Clinton raked in tens of millions of dollars through a series of deals while Hillary was Secretary of State','prisonplanet.com\r'),
+ ('admin','Video: Rude CNN Reporter Asks Trump Why Hes Taking Time Off To Open A Hotel','prisonplanet.com\r'),
+ ('Letsbereal','AIG Quadruples Limits for Terrorism Insurance to $1 Billion','prisonplanet.com\r'),
+ ('admin','Trump Warns Of Vote Flipping On Machines','prisonplanet.com\r'),
+ ('admin','Netflix and PILL: Streaming firm boss reveals the future of TV could be a Matrix-style hallucinatory drug','prisonplanet.com\r'),
+ ('admin','Republicans in Congress are ready for Hillary as they prepare for new probes into Clinton Foundation','prisonplanet.com\r'),
+ ('admin','MSNBCs Scarborough Zings: The Media Is Aggressively Taken Sides and Theyve Admitted to it!','prisonplanet.com\r'),
+ ('admin','Liberal CNN Commentator Blames Republicans for Obamacares Rising Premiums','prisonplanet.com\r'),
+ ('admin','Mission accomplished? RT crew finds refugees still at Jungle camp despite successful eviction','prisonplanet.com\r'),
+ ('admin','Dying out: Wild animal numbers could fall by 67% from 1970-2020, study says','prisonplanet.com\r'),
+ ('SUPREMEMASTER','Babylon Mystery Religion Series','prisonplanet.com\r'),
+ ('SUPREMEMASTER','Obsolete 2016','prisonplanet.com\r'),
+ ('Letsbereal','Nintendo Cuts Full-Year Sales, Operating Profit Forecasts','prisonplanet.com\r'),
+ ('Letsbereal','Messaging-App Comp, Line’s Profit Misses Estimates as Ads Push Meets Slow Growth','prisonplanet.com\r'),
+ ('Letsbereal','EU states agree caps on wholesale roaming charges','prisonplanet.com\r'),
+ ('admin','Three Quarters Of Americans Oppose Gun Control','prisonplanet.com\r'),
+ ('admin','Wikileaks Email: Clinton Operative Thinks Black Voters Are Stupid','prisonplanet.com\r'),
+ ('admin','Britain joins biggest European military buildup since Cold War','prisonplanet.com\r'),
+ ('admin','Fox News Poll: Clinton leads Trump by three points','prisonplanet.com\r'),
+ ('admin','MYSTERY: Are Hillary Clintons eye problems becoming more frequent?','prisonplanet.com\r'),
+ ('Brendan','‘Solar Winds’ Spur Geomagnetic Storm That May Affect Power','prisonplanet.com\r');
+/*!40000 ALTER TABLE `datacollected` ENABLE KEYS */;
+
+
+--
+-- Definition of table `nonpromisingdata`
+--
+
+DROP TABLE IF EXISTS `nonpromisingdata`;
+CREATE TABLE `nonpromisingdata` (
+  `style` varchar(5000) NOT NULL,
+  `words` varchar(5000) NOT NULL,
+  `source` varchar(5000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `nonpromisingdata`
+--
+
+/*!40000 ALTER TABLE `nonpromisingdata` DISABLE KEYS */;
+INSERT INTO `nonpromisingdata` (`style`,`words`,`source`) VALUES 
+ (':','Comment','abcnews.com.co'),
+ (',','ABC News','bb4sp.com\r'),
+ ('(','WritingSouls','videokiwiii.\r'),
+ (')','Guaranteeing','-\r'),
+ ('@','Comerford','ggg\r'),
+ ('-','Moyers','idiot\r'),
+ ('?','FILIPINO','…\r'),
+ ('.','High-Profile','+\r');
+/*!40000 ALTER TABLE `nonpromisingdata` ENABLE KEYS */;
+
+
+--
+-- Definition of table `originalsource`
+--
+
+DROP TABLE IF EXISTS `originalsource`;
+CREATE TABLE `originalsource` (
+  `fake_count` int(11) NOT NULL,
+  `Author` varchar(5000) NOT NULL,
+  `Description` varchar(5000) NOT NULL,
+  `URL` varchar(5000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `originalsource`
+--
+
+/*!40000 ALTER TABLE `originalsource` DISABLE KEYS */;
+/*!40000 ALTER TABLE `originalsource` ENABLE KEYS */;
+
+
+--
+-- Definition of table `userregistration`
+--
+
+DROP TABLE IF EXISTS `userregistration`;
+CREATE TABLE `userregistration` (
+  `username` varchar(45) NOT NULL,
+  `emailid` varchar(45) NOT NULL,
+  `phoneno` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `confirmpassword` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `userregistration`
+--
+
+/*!40000 ALTER TABLE `userregistration` DISABLE KEYS */;
+/*!40000 ALTER TABLE `userregistration` ENABLE KEYS */;
+
+
+--
+-- Definition of table `writingstyle`
+--
+
+DROP TABLE IF EXISTS `writingstyle`;
+CREATE TABLE `writingstyle` (
+  `fake_count` int(11) NOT NULL,
+  `Author` varchar(5000) NOT NULL,
+  `Description` varchar(5000) NOT NULL,
+  `URL` varchar(5000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `writingstyle`
+--
+
+/*!40000 ALTER TABLE `writingstyle` DISABLE KEYS */;
+/*!40000 ALTER TABLE `writingstyle` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

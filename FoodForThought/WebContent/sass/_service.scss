@@ -1,0 +1,193 @@
+/**************** service_part css start ****************/
+.service_part {
+   padding: 268px 0px 140px;
+
+   @media #{$tab} {
+      padding: 110px 0px 70px;
+   }
+
+   @media #{$medium_device} {
+      padding: 200px 0px 80px;
+   }
+
+   .mt_60 {
+      margin-top: 60px;
+   }
+
+   .service_text {
+      @media #{$tab} {
+         margin-top: 25px;
+      }
+
+      @media #{$medium_device} {}
+
+      h2 {
+         font-size: 36px;
+         margin-bottom: 34px;
+         font-weight: 700;
+         line-height: 46px;
+
+         span {
+            color: $btn_bg;
+         }
+
+         @media #{$tab} {
+            font-size: 25px;
+            margin-bottom: 15px;
+            line-height: 35px;
+         }
+
+         @media #{$medium_device} {
+            font-size: 31px;
+            margin: 20px 0 15px;
+         }
+
+         span {
+            font-weight: 400;
+
+         }
+      }
+
+      p {
+         margin-bottom: 15px;
+      }
+
+      .btn_3 {
+         margin-top: 45px;
+
+         @media #{$tab} {
+            margin-top: 10px;
+         }
+
+         @media #{$medium_device} {}
+      }
+   }
+
+
+   .single_service_text {
+      padding: 30px;
+      margin-top: 30px;
+      background-color: #fafafa;
+      position: relative;
+      border-bottom-right-radius: 50px;
+      border-top-left-radius: 50px;
+      @include transition(0.5s);
+
+      @media #{$tab} {
+         margin-top: 15px;
+      }
+
+      @media #{$medium_device} {
+         margin-top: 15px;
+      }
+
+      a {
+         text-transform: uppercase;
+         font-size: 14px;
+         color: $btn_bg;
+         font-weight: 700;
+         margin-top: 23px;
+         display: inline-block;
+      }
+
+      i {
+         font-size: 27px;
+         color: $btn_bg;
+      }
+
+      h4 {
+         font-size: 18px;
+         font-weight: 700;
+         text-transform: capitalize;
+         margin: 8px 0 20px;
+
+         @media #{$tab} {}
+
+         @media #{$medium_device} {}
+      }
+
+      p {
+         @media #{$tab} {
+            padding-top: 15px;
+         }
+
+         @media #{$medium_device} {}
+      }
+
+      &:hover {
+         background-image: -moz-linear-gradient(-66deg, rgb(127, 0, 255) 0%, rgb(225, 0, 255) 100%);
+         background-image: -webkit-linear-gradient(-66deg, rgb(127, 0, 255) 0%, rgb(225, 0, 255) 100%);
+         background-image: -ms-linear-gradient(-66deg, rgb(127, 0, 255) 0%, rgb(225, 0, 255) 100%);
+         border-bottom-left-radius: 50px;
+         border-top-right-radius: 50px;
+         border-bottom-right-radius: 0;
+         border-top-left-radius: 0;
+
+         a,
+         i,
+         h4,
+         p {
+            color: $white_color;
+         }
+      }
+
+      &:hover {
+         background-position: right;
+
+         color: $white_color !important;
+      }
+   }
+
+   .service_part_iner {
+      .col-lg-6 {
+         &:first-child {
+            margin-top: 60px;
+
+            @media #{$tab} {
+               margin-top: 0;
+            }
+
+            @media #{$medium_device} {}
+         }
+
+         &:last-child {
+            margin-top: -60px;
+
+            @media #{$tab} {
+               margin-top: 0;
+            }
+
+            @media #{$medium_device} {}
+         }
+      }
+   }
+}
+
+@media #{$tab} {
+   .mt_30 {
+      margin-top: 30px;
+   }
+}
+
+@media #{$medium_device} {}
+
+.single_page_service {
+   padding: 180px 0 116px;
+
+   @media #{$tab} {
+      padding: 70px 0 50px;
+   }
+
+   @media #{$medium_device} {
+      padding: 75px 0 50px;
+   }
+
+   .btn_1 {
+      background-color: $btn_bg;
+      color: $white_color;
+
+      &:hover {
+         color: $btn_hover;
+      }
+   }
+}

@@ -1,0 +1,105 @@
+.event_part{
+    padding: 140px 0 80px;
+    overflow: hidden;
+    @media #{$tab}{
+        padding: 70px 0;
+    }
+    @media #{$medium_device}{
+        padding: 80px 0 20px;
+    }
+    .single_event{
+        background-color: #fafafa;
+        border-top-left-radius: 46px;
+        border-bottom-right-radius: 46px;
+        position: relative;
+        margin-bottom: 60px;
+        @media #{$tab}{
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+        
+         @media #{$sm_mobile}{
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        @media #{$medium_device}{
+        
+        }
+        .media-body{
+            padding: 30px 56px;
+            @media #{$tab}{
+                padding: 30px;
+            }
+            @media #{$sm_mobile}{
+                padding: 15px;
+            }
+            @media #{$medium_device}{
+                padding: 15px 40px 15px 15px;
+            }
+            h5{
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 12px;
+            }
+            p{
+                font-weight: 300;
+            }
+        }
+        ul{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+            li {
+                display: inline-block;
+                font-size: 14px;
+                font-weight: 300;
+                text-align: center;
+                border-right: 1px solid #ddd;
+                padding-right: 30px;
+                @media #{$large_mobile}{
+                    padding-right: 15px;
+                }
+                @media #{$tab}{
+                    border: 1px solid transparent;
+                }
+                @media #{$medium_device}{
+                    border: 1px solid transparent;
+                }
+                &:last-child{
+                    border-right: 0px solid transparent;
+                    padding-right: 0;
+                }
+                span {
+                    display: block;
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    margin-bottom: 5px;
+                  }
+              }
+        }
+    }
+    .tricker{
+        background-image: -moz-linear-gradient( 16deg, rgb(147,0,255) 0%, rgb(213,0,255) 100%);
+        background-image: -webkit-linear-gradient( 16deg, rgb(147,0,255) 0%, rgb(213,0,255) 100%);
+        background-image: -ms-linear-gradient( 16deg, rgb(147,0,255) 0%, rgb(213,0,255) 100%);
+        font-size: 16px;
+        font-weight: 700;
+        padding: 8px 6px;
+        color: $white_color;
+        border-bottom-left-radius: 25px;
+        position: absolute;
+        right: 0;
+    }
+    @media #{$tab}{
+        .single_event {
+            img{
+                width: 100%;
+            }
+        }
+    }
+    @media #{$medium_device}{
+    
+    }
+}

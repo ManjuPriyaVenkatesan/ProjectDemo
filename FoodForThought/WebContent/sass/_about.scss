@@ -1,0 +1,256 @@
+/************Team css start***************/
+.about_us {
+  position: relative;
+  z-index: 99;
+
+  .about_us_img{
+      background-image: url(../img/about_bg.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      padding: 60px;
+      @media #{$tab} {
+        padding: 10px;
+        margin-bottom: 40px;
+      }
+    
+      @media #{$medium_device} {
+        
+      }
+      img{
+          width: 100%;
+          height: auto;
+          border-top-left-radius: 30px;
+          border-bottom-right-radius: 30px;
+      }
+  }
+  .about_us_text {
+    padding-left: 40px;
+    @media #{$small_mobile} {
+      padding-left: 0;
+    }
+
+    @media #{$large_mobile} {
+      padding-left: 0;
+    }
+
+    @media #{$tab_device} {
+      padding-left: 0;
+    }
+
+    @media #{$medium_device} {
+      padding-left: 40px;
+    }
+    h5{
+      font-weight: 700;
+      font-size: 24px;
+      border-left: 5px solid $btn_bg;
+      padding-left: 20px;
+      span{
+        font-size: 16px;
+        letter-spacing: 2px;
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+    }
+    h2 {
+      font-size: 36px;
+      font-weight: 700;
+      margin: 65px 0 28px;
+      position: relative;
+      @media #{$tab} {
+        font-size: 22px;
+        margin-bottom: 10px;
+        line-height: 35px;
+        margin-top: 15px;
+      }
+      @media #{$medium_device} {
+        font-size: 28px !important;
+        line-height: 40px;
+        margin: 15px 0 10px !important;
+      }
+    }
+
+    p {
+      line-height: 1.929;
+      margin-bottom: 35px;
+      @media #{$small_mobile} {
+        margin-bottom: 10px;
+      }
+      @media #{$large_mobile} {
+        margin-bottom: 20px;
+      }
+      @media #{$tab_device} {
+        margin-bottom: 20px;
+      }
+      @media #{$medium_device} {}
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 30px;
+
+      @media #{$small_mobile} {
+        margin-bottom: 10px;
+      }
+
+      @media #{$large_mobile} {
+        margin-bottom: 20px;
+      }
+
+      @media #{$tab_device} {
+        margin-bottom: 20px;
+      }
+
+      @media #{$medium_device} {}
+
+      li {
+        display: inline-block;
+        margin-bottom: 20px;
+        font-size: 16px;
+        padding-right: 33px;
+        padding-top: 12px;
+        color: $heading_color;
+        width: 50%;
+        float: left;
+        font-family: $font_stack_2;
+        position: relative;
+        padding-left: 29px;
+
+        @media #{$tab} {
+          padding-top: 5px;
+          padding-right: 15px;
+        }
+
+        span {
+          margin-right: 10px;
+          color: $btn_bg;
+          position: absolute;
+          top: 16px;
+          left: 0;
+
+          @media #{$tab} {
+            top: 10px;
+          }
+        }
+      }
+    }
+
+    .btn_2 {
+      margin-top: 13px;
+    }
+  }
+}
+
+.banner_item {
+  display: flex;
+  justify-content: space-between;
+  @media #{$tab} {
+    display: inline-block;
+    width: 100%;
+    float: left;
+  }
+  @media #{$large_mobile}{
+    display: flex;
+  }
+  @media #{$tab_device}{
+    display: flex;
+  }
+  
+  .single_item {
+    text-align: center;
+    margin: 25px 0;
+    position: relative;
+    z-index: 1;
+    padding: 35px 25px 20px;
+    width: 100%;
+    border: 1px solid #eeeeee;
+    border-radius: 50px 0 50px 0;
+    @include transform_time(0.5s);
+    &:hover{
+      border: 1px solid $btn_bg;
+      box-shadow: 9px 10px 0px 4px #faf4ff;
+    }
+    @media #{$tab} {
+
+    }
+
+    @media #{$medium_device} {
+      padding: 15px ;
+    }
+    &:nth-child(2){
+      margin: 25px 30px;
+      @media #{$tab} {
+        margin: 0;
+      }
+      @media #{$large_mobile}{
+        margin: 25px 30px;
+      }
+      @media #{$tab_device}{
+        margin: 25px 30px;
+      }
+    }
+    h5{
+      padding-left: 0;
+      border: 1px solid transparent;
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: 300;
+      margin-top: 12px;
+    }
+    h2{
+      font-size: 48px;
+      line-height: 50px;
+      margin: 0;
+    }
+    @media #{$tab} {
+
+    }
+
+    @media #{$medium_device} {
+
+    }
+  }
+  
+
+}
+
+.top_service {
+  @media #{$tab} {
+    padding: 0 0 70px;
+
+    .our_abilityabout_us_img {
+      margin-top: 25px;
+    }
+  }
+
+  @media #{$medium_device} {}
+}
+.single_about_padding{
+  padding: 140px 0 0;
+  margin-bottom: 515px;
+   @media #{$tab} {
+      padding: 70px 0 0;
+      margin-bottom: 70px;
+   }
+
+   @media #{$medium_device} {
+      padding: 80px 0 0;
+      margin-bottom: 150px;
+   }
+}
+
+.about_btn{
+  .btn_3{
+    margin-top: 60px;
+    @media #{$tab} {
+      margin-top: 30px;
+   }
+
+   @media #{$medium_device} {
+    margin-top: 30px;
+   }
+  }
+}

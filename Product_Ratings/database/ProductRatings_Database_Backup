@@ -1,0 +1,381 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.5.25a
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema product_ratings
+--
+
+CREATE DATABASE IF NOT EXISTS product_ratings;
+USE product_ratings;
+
+--
+-- Definition of table `adminaddproducts`
+--
+
+DROP TABLE IF EXISTS `adminaddproducts`;
+CREATE TABLE `adminaddproducts` (
+  `productid` varchar(45) NOT NULL,
+  `productname` varchar(5000) NOT NULL,
+  `productbrand` varchar(5000) NOT NULL,
+  `productprice` varchar(45) NOT NULL,
+  `productdescription` varchar(5000) NOT NULL,
+  `photoname` varchar(5000) NOT NULL,
+  `photopath` varchar(5000) NOT NULL,
+  `productimage` longblob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `adminaddproducts`
+--
+
+/*!40000 ALTER TABLE `adminaddproducts` DISABLE KEYS */;
+/*!40000 ALTER TABLE `adminaddproducts` ENABLE KEYS */;
+
+
+--
+-- Definition of table `product_rating`
+--
+
+DROP TABLE IF EXISTS `product_rating`;
+CREATE TABLE `product_rating` (
+  `productid` varchar(45) NOT NULL,
+  `productrating` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `product_rating`
+--
+
+/*!40000 ALTER TABLE `product_rating` DISABLE KEYS */;
+/*!40000 ALTER TABLE `product_rating` ENABLE KEYS */;
+
+
+--
+-- Definition of table `ratinggeneration`
+--
+
+DROP TABLE IF EXISTS `ratinggeneration`;
+CREATE TABLE `ratinggeneration` (
+  `comments` varchar(5000) NOT NULL,
+  `negativecount` varchar(45) NOT NULL,
+  `positivecount` varchar(45) NOT NULL,
+  `productid` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ratinggeneration`
+--
+
+/*!40000 ALTER TABLE `ratinggeneration` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ratinggeneration` ENABLE KEYS */;
+
+
+--
+-- Definition of table `sentimentwords`
+--
+
+DROP TABLE IF EXISTS `sentimentwords`;
+CREATE TABLE `sentimentwords` (
+  `positive_words` varchar(45) NOT NULL,
+  `negative_words` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sentimentwords`
+--
+
+/*!40000 ALTER TABLE `sentimentwords` DISABLE KEYS */;
+INSERT INTO `sentimentwords` (`positive_words`,`negative_words`) VALUES 
+ ('good','bad'),
+ ('attractive','not attractive'),
+ ('ok','yell'),
+ ('okay','worst'),
+ ('better','poor'),
+ ('absolutely','abysmal\r'),
+ ('accepted','adverse\r'),
+ ('acclaimed','alarming\r'),
+ ('accomplish','angry\r'),
+ ('accomplishment','annoy\r'),
+ ('achievement','anxious\r'),
+ ('action','apathy\r'),
+ ('active','appalling\r'),
+ ('admire','atrocious\r'),
+ ('adorable','awful\r'),
+ ('adventure','banal\r'),
+ ('affirmative','barbed\r'),
+ ('agree','belligerent\r'),
+ ('agreeable','bemoan\r'),
+ ('amazing','beneath\r'),
+ ('angelic','boring\r'),
+ ('appealing','broken\r'),
+ ('approve','callous\r'),
+ ('aptitude','can\'t\r'),
+ ('awesome','clumsy\r'),
+ ('beaming','coarse\r'),
+ ('beautiful','cold\r'),
+ ('believe','cold-hearted\r'),
+ ('beneficial','collapse\r'),
+ ('bliss','confused\r'),
+ ('bountiful','contradictory\r'),
+ ('bounty','contrary\r'),
+ ('bravo','corrosive\r'),
+ ('brilliant','corrupt\r'),
+ ('bubbly','crazy\r'),
+ ('calm','creepy\r'),
+ ('celebrated','criminal\r'),
+ ('certain','cruel\r'),
+ ('champ','cry\r'),
+ ('champion','cutting\r'),
+ ('charming','damage\r'),
+ ('choice','damaging\r'),
+ ('classic','dastardly\r'),
+ ('classical','dead\r'),
+ ('clean','decaying\r'),
+ ('commend','deformed\r'),
+ ('composed','deny\r'),
+ ('congratulation','deplorable\r'),
+ ('constant','depressed\r'),
+ ('cool','deprived\r'),
+ ('courageous','despicable\r'),
+ ('creative','detrimental\r'),
+ ('cute','dirty\r'),
+ ('dazzling','disease\r'),
+ ('delight','disgusting\r'),
+ ('delightful','disheveled\r'),
+ ('divine','dishonest\r'),
+ ('earnest','dishonorable\r'),
+ ('easy','dismal\r'),
+ ('effective','distress\r'),
+ ('efficient','don\'t\r'),
+ ('elegant','dreadful\r'),
+ ('enchanting','dreary\r'),
+ ('encouraging','enraged\r'),
+ ('endorsed','eroding\r'),
+ ('energetic','evil\r'),
+ ('engaging','fail\r'),
+ ('enthusiastic','faulty\r'),
+ ('essential','fear\r'),
+ ('esteemed','feeble\r'),
+ ('ethical','fight\r'),
+ ('excellent','filthy\r'),
+ ('exciting','foul\r'),
+ ('exquisite','frighten\r'),
+ ('fabulous','frightful\r'),
+ ('fair','gawky\r'),
+ ('familiar','ghastly\r'),
+ ('famous','grave\r'),
+ ('fantastic','greed\r'),
+ ('favorable','grim\r'),
+ ('fetching','grimace\r'),
+ ('fine','gross\r'),
+ ('flourishing','grotesque\r'),
+ ('fortunate','gruesome\r'),
+ ('free','guilty\r'),
+ ('fresh','haggard\r'),
+ ('friendly','hard\r'),
+ ('fun','hard-hearted\r'),
+ ('funny','harmful\r'),
+ ('generous','hate\r'),
+ ('genius','hideous\r'),
+ ('genuine','homely\r'),
+ ('giving','horrendous\r'),
+ ('glamorous','horrible\r'),
+ ('glowing','hostile\r'),
+ ('gorgeous','hurt\r'),
+ ('graceful','hurtful\r'),
+ ('great','icky\r'),
+ ('green','ignorant\r'),
+ ('growing','ignore\r'),
+ ('handsome','ill\r'),
+ ('happy','immature\r'),
+ ('healthy','imperfect\r'),
+ ('hearty','impossible\r'),
+ ('heavenly','inane\r'),
+ ('honest','inelegant\r'),
+ ('honorable','infernal\r'),
+ ('honored','injure\r'),
+ ('idea','injurious\r'),
+ ('ideal','insane\r'),
+ ('imagine','insidious\r'),
+ ('impressive','insipid\r'),
+ ('innovate','jealous\r'),
+ ('innovative','junky\r'),
+ ('instant','lose\r'),
+ ('instantaneous','lousy\r'),
+ ('intelligent','lumpy\r'),
+ ('inventive','malicious\r'),
+ ('jovial','mean\r'),
+ ('joy','menacing\r'),
+ ('jubilant','messy\r'),
+ ('keen','misshapen\r'),
+ ('kind','missing\r'),
+ ('knowing','misunderstood\r'),
+ ('knowledgeable','moan\r'),
+ ('laugh','moldy\r'),
+ ('learned','monstrous\r'),
+ ('light','naive\r'),
+ ('lively','nasty\r'),
+ ('lovely','naughty\r'),
+ ('lucky','negate\r'),
+ ('luminous','negative\r'),
+ ('marvelous','never\r'),
+ ('masterful','no\r'),
+ ('meaningful','nobody\r'),
+ ('merit','nondescript\r'),
+ ('meritorious','nonsense\r'),
+ ('miraculous','not\r'),
+ ('motivating','noxious\r'),
+ ('moving','objectionable\r'),
+ ('natural','odious\r'),
+ ('nice','offensive\r'),
+ ('novel','old\r'),
+ ('now','oppressive\r'),
+ ('nurturing','pain\r'),
+ ('nutritious','perturb\r'),
+ ('one','pessimistic\r'),
+ ('one-hundred percent','petty\r'),
+ ('open','plain\r'),
+ ('optimistic','poisonous\r'),
+ ('paradise','prejudice\r'),
+ ('perfect','questionable\r'),
+ ('phenomenal','quirky\r'),
+ ('pleasant','quit\r'),
+ ('pleasurable','reject\r'),
+ ('plentiful','renege\r'),
+ ('polished','repellant\r'),
+ ('popular','reptilian\r'),
+ ('positive','repugnant\r'),
+ ('powerful','repulsive\r'),
+ ('prepared','revenge\r'),
+ ('pretty','revolting\r'),
+ ('principled','rocky\r'),
+ ('productive','rotten\r'),
+ ('progress','rude\r'),
+ ('prominent','ruthless\r'),
+ ('protected','sad\r'),
+ ('proud','savage\r'),
+ ('quality','scare\r'),
+ ('quick','scary\r'),
+ ('quiet','scream\r'),
+ ('ready','severe\r'),
+ ('refined','shocking\r'),
+ ('rejoice','shoddy\r'),
+ ('reliable','sick\r'),
+ ('remarkable','sickening\r'),
+ ('resounding','sinister\r'),
+ ('respected','slimy\r'),
+ ('restored','smelly\r'),
+ ('reward','sobbing\r'),
+ ('rewarding','sorry\r'),
+ ('right','spiteful\r'),
+ ('robust','sticky\r'),
+ ('safe','stinky\r'),
+ ('satisfactory','stormy\r'),
+ ('secure','stressful\r'),
+ ('seemly','stuck\r'),
+ ('simple','stupid\r'),
+ ('skilled','substandard\r'),
+ ('smile','suspect\r'),
+ ('soulful','suspicious\r'),
+ ('sparkling','tense\r'),
+ ('special','terrible\r'),
+ ('stunning','terrifying\r'),
+ ('success','threatening\r'),
+ ('successful','ugly\r'),
+ ('super','undermine\r'),
+ ('superb','unfair\r'),
+ ('supporting','unfavorable\r'),
+ ('surprising','unhappy\r'),
+ ('tops','unhealthy\r'),
+ ('tranquil','unjust\r'),
+ ('transforming','unlucky\r'),
+ ('trusting','unpleasant\r'),
+ ('truthful','unsatisfactory\r'),
+ ('up','unsightly\r'),
+ ('upbeat','untoward\r'),
+ ('upright','unwanted\r'),
+ ('upstanding','unwelcome\r'),
+ ('valued','unwholesome\r'),
+ ('vibrant','unwieldy\r'),
+ ('victory','unwise\r'),
+ ('vital','upset\r'),
+ ('wealthy','vice\r'),
+ ('welcome','vicious\r'),
+ ('well','vile\r'),
+ ('whole','hate\r'),
+ ('wholesome','vindictive\r'),
+ ('willing','wary\r'),
+ ('wonderful','weary\r'),
+ ('worthy','wicked\r'),
+ ('wow','woeful\r'),
+ ('yes','worthless\r'),
+ ('gud','Zero\r');
+/*!40000 ALTER TABLE `sentimentwords` ENABLE KEYS */;
+
+
+--
+-- Definition of table `userbuyproducts`
+--
+
+DROP TABLE IF EXISTS `userbuyproducts`;
+CREATE TABLE `userbuyproducts` (
+  `productid` varchar(45) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `emailid` varchar(45) NOT NULL,
+  `paymentmode` varchar(45) NOT NULL,
+  `deliveryaddress` varchar(5000) NOT NULL,
+  `comments` varchar(5000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `userbuyproducts`
+--
+
+/*!40000 ALTER TABLE `userbuyproducts` DISABLE KEYS */;
+/*!40000 ALTER TABLE `userbuyproducts` ENABLE KEYS */;
+
+
+--
+-- Definition of table `userregistration`
+--
+
+DROP TABLE IF EXISTS `userregistration`;
+CREATE TABLE `userregistration` (
+  `username` varchar(45) NOT NULL,
+  `emailid` varchar(45) NOT NULL,
+  `phoneno` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `confirmpassword` varchar(45) NOT NULL,
+  PRIMARY KEY (`emailid`,`phoneno`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `userregistration`
+--
+
+/*!40000 ALTER TABLE `userregistration` DISABLE KEYS */;
+/*!40000 ALTER TABLE `userregistration` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
